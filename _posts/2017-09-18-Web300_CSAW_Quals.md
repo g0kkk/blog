@@ -57,6 +57,12 @@ In [4]: str = "\xac\xed\x00\x05sr\x00\x0fcoffee.FlagBean\x00\x00\x00\x00\x00\x00
 
 So the final string that had to be sent to the server in `parent1` was `rO0ABXNyAA9jb2ZmZWUuRmxhZ0JlYW4AAAAAAAAAAQIAAHhyAAtjb2ZmZWUuQmVhbgAAAAAAAAABAgAETAAHaW5oZXJpdHQADUxjb2ZmZWUvQmVhbjtMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7TAAHcGFyZW50MXEAfgACTAAHcGFyZW50MnEAfgACeHBwdAAERmxhZ3Bw-6715801eb21604db3f35709ff86ee6ac86e75bab042d2e4fced219c7a130763c`.
 
-Bingo, modifying the request with the parameter of `Name` filled gives us the flag
+Bingo, modifying the request of `parent1` with the parameter of `Name` filled gives us the flag
+
+<figure class="foto-legenda">
+	<img src="{{ "/assets/img/ctfwriteup/burpfinal.png"}}" alt="">
+	<figcaption> <p>Modifying the parameter with Burp.</p>
+	</figcaption>
+</figure>
 
 `flag{yd1dw3wr1t3th15j@v....`

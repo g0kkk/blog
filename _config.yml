@@ -2,7 +2,7 @@
 title: Gokul Krishna - Web Security Researcher
 description: "Web Security"
 baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
-url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+url: "http://gokulkrishna01.github.io/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
 # User settings
 username: gkrishna
 user_title: Gokul Krishna - Web Security
@@ -39,8 +39,8 @@ links:
     url: /about
 # projects in header index
 projects:
-  - name: asciilang
-    url: https://github.com/victorvoid/asciilang
+  - name: Ethereum-Solidity
+    url: https://github.com/gokulkrishna01/Ethereum-Solidity
   - name: vim-frontend
     url: https://github.com/victorvoid/vim-frontend
   - name: generator-capybara
