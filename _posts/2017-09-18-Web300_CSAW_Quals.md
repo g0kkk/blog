@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Java Serialization - CSAW Web 300"
+title:  "Java_Serialization-CSAW_Web_300"
 image: ''
 date:   2017-09-18 00:06:31
 tags:
@@ -10,7 +10,7 @@ categories:
 - Web, Java Serialization
 ---
 
-So after a break from last year writing blogs, I thought of writing blog for this particular challenge for the reason that the time it took to get solved and also the method involved to solve this particular challenge.
+So after a break from last year on writing <a href="https://gokulkrishna01.wordpress.com/">blogs</a>, I thought of writing blog for this particular challenge for the reason that the time it took to get solved and also the method involved to solve this particular challenge.
 
 The challenge description was `Not My Cup of Coffee, I heard you liked food based problems, so here's a liquid one.`
 <a href="http://web.chal.csaw.io:8616"> Challenge Link</a>
@@ -91,3 +91,5 @@ Bingo, modifying the request of `parent1` with the parameter of `Name` filled gi
 </figure>
 
 `flag{yd1dw3wr1t3th15j@v....`
+
+Reach me out on <a href="https://twitter.com/gkgkrishna33">Twitter</a> for more updates.
