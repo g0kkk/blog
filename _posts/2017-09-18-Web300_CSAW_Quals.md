@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Java_Serialization-CSAW_Web_300"
+title:  "Java Serialization-CSAW Web 300"
 image: ''
 date:   2017-09-18 00:06:31
 tags:
