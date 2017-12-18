@@ -19,7 +19,7 @@ About the challenge, you have a welcome screen where in it is written `Site unde
 <figure class="foto-legenda">
 	<img src="{{ "/assets/img/ctfwriteup/InCTF/Welcome_screen.png"}}" alt="">
 </figure>
-Going through the source code and cookies doesn't reveal anything. Since there are several tools available to see the directories available, one such tool being the <a href="https://github.com/gokulkrishna01/Webexploiter" Web exploiter</a> reveals that there is `robots.txt` and upon going through that, we can see a few folders.
+Going through the source code and cookies doesn't reveal anything. Since there are several tools available to see the directories available, one such tool being the <a href="https://github.com/gokulkrishna01/Webexploiter"> Web exploiter</a> reveals that there is `robots.txt` and upon going through that, we can see a few folders.
 
 ```
 User-agent: *
