@@ -35,4 +35,4 @@ Since the above attack or measurement can only be done in browsers which have ex
 
 So the scenario mentioned in the paper is like, `the attacker starts a timer and stores the result of performance.now() in a varaible`. After a period of time, the result is returned and moreover, the same thing is done for an arbitrary extension ID as well. This difference in time return helps an attacker to identify/track user.
 
-The defence proposed by the attacker was two, one being the extension ID unguessable and the other, a constant execution time when trying to access a resource of an extension. The way in which the authors have crafted this is just amazing. Kudos to the authors and thanks for this wonderful paper.  
+The defence proposed by the attacker was two, one being the extension ID unguessable and the other, a constant execution time when trying to access a resource of an extension. The way in which the authors have crafted this is just amazing. Kudos to the authors and thanks for this wonderful paper. Reach me out on <a href="https://twitter.com/gkgkrishna33/status/942980228044877824">Twitter</a> for any queries. 
