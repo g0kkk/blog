@@ -40,6 +40,8 @@ links:
 # projects in header index
 projects:
   - name: Ethereum-Solidity
-    url: https://github.com/gokulkrishna01/Ethereum-Solidity 
+    url: https://github.com/gokulkrishna01/Ethereum-Solidity
+  - name: Privacy Management Extension
+    url: https://github.com/Web-privacy/Privacy-Extension 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
