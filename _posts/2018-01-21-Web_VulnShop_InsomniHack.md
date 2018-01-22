@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "InsomniHack 2018 Web Challenge"
+title:  "Remote Code Execution via Session - InsomniHack Teaser 2018"
 image: ''
 date:   2018-01-21 00:06:31
 tags:
 - Web Security, CTF, Insomnihack, RCE, Session overwrite
-description: 'InsomniHack CTF Web Challenge writeup'
+description: 'InsomniHack CTF Vulnshop Web Challenge writeup'
 categories:
 - Web, CTF, PHP-RCE
 ---
