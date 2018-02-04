@@ -14,7 +14,7 @@ So this was my very next CTF after Acebear which was a Fun CTF. Talking about th
 is that this challenge had comparatively very less solves.
 
 The description talks about the username which is `jack` and states that `password: Year and month of Jack's birthday.`. So the first step
-that came into my mind was bruteforcing the hell out of there( <a href="./exploit.py">Exploit</a> ) and had a very hard time in finding them
+that came into my mind was bruteforcing the hell out of there( <a href="https://github.com/gokulkrishna01/gokulkrishna01.github.io/blob/master/exploit.py">Exploit</a> ) and had a very hard time in finding them
 as the DOB was kinda screwed up. Finally after around one hour, managed to get the DOB, `195408` which was the password and took us to the
 next page, `GetImages` wherein there were a lot of images being showed up and also, a functionality to upload the image.
 
