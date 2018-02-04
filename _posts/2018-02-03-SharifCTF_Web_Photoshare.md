@@ -39,4 +39,4 @@ personally don't find fun in playing these kind of challenges.
 
 Flag: `SharifCTF{kmvfwmj6sea7get9wggu249ehjc8hmdd}`
 
-Reach me out in <a href="https://twitter.com/gkgkrishna33">Twitter</a>.
+Reach me out on <a href="https://twitter.com/gkgkrishna33">Twitter</a>.
