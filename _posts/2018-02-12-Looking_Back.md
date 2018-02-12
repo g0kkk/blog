@@ -12,7 +12,7 @@ categories:
 
 This time I'm going to write a post which is not related to anything technical, but rather an insight into what all I have been through the years that went through during my Engineering.
 
-One thing that I have been hearing from my friends is that "Oh damn, I shouldn't have taken engineering. It is pretty much messed up because of the backlogs.". But those statements make me think why doesn't such thoughts come into my mind (one could say that I might not have had any backlogs, true. But that isn't the one what I'm trying to prove here). Was it because I enjoyed my four long years way too much? Was it because I gave no importance to my academics? Well, no. This post could be long, boring but very well, this should be interesting to a certain extent "smiley": or at least I'll try to make it interesting.
+One thing that I have been hearing from my friends is that "Oh damn, I shouldn't have taken engineering. It is pretty much messed up because of the backlogs.". But those statements make me think why doesn't such thoughts come into my mind (one could say that I might not have had any backlogs, true. But that isn't the one what I'm trying to prove here). Was it because I enjoyed my four long years way too much? Was it because I gave no importance to my academics? Well, no. This post could be long, boring but very well, this should be interesting to a certain extent :smiley: or at least I'll try to make it interesting.
 
 Back from fourth grade, I was interested in playing basketball and had continued with my interest until my 12th grade. Till tenth, everything was mechanical, the work and I was told that 10th scores were really important, blah blah and that got over. Well, now I have got to choose something from three streams that were offered in my school and ultimately I had taken Computer science because of my interest towards computers. Well, there weren't much of computers during that time and was too much of "Science" in which I scored average scores. There was pressure from my entrance coaching class, oh wait, I did not mention about my dream. As all other engineering students, my aim was getting into an IIT and ultimately joined one institute wherein we were given a lot of assignments and all the pressure as I said dragged me down in academics but basketball and all were going pretty well :smiley:.
 
@@ -41,4 +41,4 @@ All these were never an easy task. There were tough times where I was totally up
 
 And, at the end of my Bachelor's course, I have a lot of memories to carry forward and also, regrets too which made me who I am now.
 
-Cheers U+1F60A
+Cheers :smile:
