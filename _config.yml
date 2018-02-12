@@ -17,6 +17,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+plugins:
+  - jemoji
 
 # html minify
 compress_html:
@@ -42,6 +44,6 @@ projects:
   - name: Ethereum-Solidity
     url: https://github.com/gokulkrishna01/Ethereum-Solidity
   - name: Privacy Management Extension
-    url: https://github.com/Web-privacy/Privacy-Extension 
+    url: https://github.com/Web-privacy/Privacy-Extension
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
