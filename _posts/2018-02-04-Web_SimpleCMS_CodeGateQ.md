@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SQLi - CodeGatePreQuals - 2018"
+title:  "Simple CMS - CodeGatePreQuals - 2018"
 image: ''
 date:   2018-02-04 00:06:31
 tags:
