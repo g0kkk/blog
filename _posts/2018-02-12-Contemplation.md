@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A quick lookback into my career"
+title:  "A quick look-back"
 image: ''
 date:   2018-02-12 00:06:31
 tags:
