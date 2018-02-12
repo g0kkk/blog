@@ -10,7 +10,7 @@ categories:
 -
 ---
 
-This time I'm going to write a post which is not related to anything technical, but rather an insight into what all I have been through the years that went during my Engineering.
+This time I'm going to write a post which is not related to anything technical, but rather an insight into what all I have been through the years of my Engineering.
 
 One thing that I have heard from my friends is that "Oh damn, I shouldn't have taken engineering. It is pretty much messed up because of the backlogs.". But those statements make me think why doesn't such thoughts come into my mind (one could say that I might not have had any backlogs, true. But that isn't the one what I'm trying to prove here). Was it because I enjoyed my four long years way too much? Was it because I gave no importance to my academics? Well, no. This post could be long, boring but very well, this should be interesting to a certain extent :bowtie: or at least I'll try to make it interesting.
 
