@@ -10,6 +10,12 @@ categories:
 - Web, CTF, SQLi, Web Security
 ---
 
+<article id="page">
+    {% include advertisements.html %}
+  {{ content }}
+
+</article>
+
 As usual, the CTF contained pretty hard challenges and there were only two web challenges. The challenge name was `SimpleCMS` which is basically a Content Management System for which they gave the source code. Woah, neet and clean and yes, setting up a challenge locally is nothing more awesome!
 
 Moving onto the challenge, from the very first view, it seems to be SQLi but I was obvious that there were some filters as I tried to register with a password as `password` which was basically denied and that was because `or` was filtered by the `waf` file.
