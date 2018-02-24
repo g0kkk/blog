@@ -30,7 +30,7 @@ Disallow: /zxcv
 `/zxcv` takes us to a login page and upon going through a source code, we can see 2 JS being called, `unicorn.js` and `script.js`.
 
 <figure class="foto-legenda">
-	<img src="{{ "/assets/img/ctfwriteup/login_page1.png"}}" alt="">
+	<img src="{{ "/assets/img/ctfwriteup/login_screen1.png"}}" alt="">
 </figure>
 
 `script.js` reveals the following code:
