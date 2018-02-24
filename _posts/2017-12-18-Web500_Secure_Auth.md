@@ -17,7 +17,7 @@ which was not just based on Web, but also on RE. The challenge was designed in s
 
 About the challenge, you have a welcome screen where in it is written `Site under maintenance`.
 <figure class="foto-legenda">
-	<img src="{{ "/assets/img/ctfwriteup/Welcome_screen1.png"}}" alt="">
+	<img src="{{ "/assets/img/ctfwriteup/welcome_screen1.png"}}" alt="">
 </figure>
 Going through the source code and cookies doesn't reveal anything. Since there are several tools available to see the directories available, one such tool being the <a href="https://github.com/gokulkrishna01/Webexploiter"> Web exploiter</a> reveals that there is `robots.txt` and upon going through that, we can see a few folders.
 
