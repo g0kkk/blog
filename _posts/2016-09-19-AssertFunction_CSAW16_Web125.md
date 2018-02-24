@@ -12,9 +12,7 @@ categories:
 
 In this challenge, we were given a web page showing `Welcome to my website! I wrote it myself from scratch!.` Next was to find the vulnerability in the page.
 
-```
-Challenge URL: http://web.chal.csaw.io:8000/
-```
+`Challenge URL: http://web.chal.csaw.io:8000/`
 
 Obviously the first thing was to look at the source code and found something commented out
 `<br /><!--<li ><a href="?page=flag">My secrets</a></li>`
