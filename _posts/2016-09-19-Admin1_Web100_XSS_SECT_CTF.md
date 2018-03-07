@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "SECT CTF 16 Admin1 - Web 100 writeup"
+comments: true
 image: ''
 date:   2016-09-16 00:20:31
 tags:

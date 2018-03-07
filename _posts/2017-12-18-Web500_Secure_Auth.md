@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "InCTF Web500 Secure Auth"
+comments: true
 image: ''
 date:   2017-12-18 00:06:31
 tags:

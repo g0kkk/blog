@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Bandit Walkthrough"
+comments: true
 image: ''
 date:   2016-05-11 14:20:31
 tags:
@@ -55,4 +56,4 @@ Since they contain spaces, one of the way I could find was to give it inside dou
 cat "spaces in this filename"
 ```
 
-Will be posting rest of the solutions soon. 
+Will be posting rest of the solutions soon.

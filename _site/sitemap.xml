@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	  <url>
+		<loc>http://localhost:4000/Contemplation/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Web_SimpleCMS_CodeGateQ/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/SharifCTF_Web_Photoshare/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Web_VulnShop_InsomniHack/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Web500_Secure_Auth/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Associating_Isolated_Browsing_Sessions/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Web300_CSAW_Quals/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Escape.alf.nu_Walkthrough/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Admin1_Web100_XSS_SECT_CTF/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/AssertFunction_CSAW16_Web125/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/Bandit_Walkthrough/</loc>
+	  </url>
+	
+</urlset>

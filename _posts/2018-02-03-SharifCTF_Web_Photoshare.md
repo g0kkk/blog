@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Session_id manipulation - SharifCTF 2018"
+comments: true
 image: ''
 date:   2018-02-04 00:06:31
 tags:

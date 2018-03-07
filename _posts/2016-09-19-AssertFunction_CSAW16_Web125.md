@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "CSAW CTF 16 Web 125 writeup"
+comments: true
 image: ''
 date:   2016-09-16 00:06:31
 tags:

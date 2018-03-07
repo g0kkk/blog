@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gokul Krishna - Web Security Researcher</title>
+    <description>Web Security</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 07 Mar 2018 23:23:47 +0530</pubDate>
+    <lastBuildDate>Wed, 07 Mar 2018 23:23:47 +0530</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>A quick look-back</title>
+        <description>&lt;p&gt;This time I’m going to write a post which is not related to anything technical, but rather an insight into what all I have been through the years of my Engineering.&lt;/p&gt; &lt;p&gt;One thing that I have heard from my friends is that “Oh damn, I shouldn’t have taken engineering. It is pretty much messed up because of the backlogs.”. But those statements make me think why doesn’t such thoughts come into my mind (one could say that I might not have had any backlogs, true. But that isn’t the one what I’m trying to prove here). Was it because I...</description>
+        <pubDate>Mon, 12 Feb 2018 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/Contemplation/</link>
+        <guid isPermaLink="true">http://localhost:4000/Contemplation/</guid>
+        
+        <category>College life, Computer Science and Engineering, Amrita University</category>
+        
+        
+        <category></category>
+        
+        <category></category>
+        
+      </item>
+    
+      <item>
+        <title>Simple CMS - CodeGatePreQuals - 2018</title>
+        <description>&lt;article id=&quot;page&quot;&gt; &lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt; &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-5012699001635479&quot; data-ad-slot=&quot;9244142234&quot;&gt;&lt;/ins&gt; &lt;script&gt; (adsbygoogle = window.adsbygoogle || []).push({}); &lt;/script&gt; &lt;p&gt;So this was my very next CTF after Acebear which was a Fun CTF. Talking about this challenge, the only reason why I’m writing a write up is that this challenge had comparatively very less solves.&lt;/p&gt; &lt;p&gt;The description talks about the username which is &lt;code class=&quot;highlighter-rouge&quot;&gt;jack&lt;/code&gt; and states that &lt;code class=&quot;highlighter-rouge&quot;&gt;password: Year and month of Jack's birthday.&lt;/code&gt;. So the first step that came into my mind was bruteforcing the hell out of there( &lt;a href=&quot;https://github.com/gokulkrishna01/gokulkrishna01.github.io/blob/master/exploit.py&quot;&gt;Exploit&lt;/a&gt; ) and had a very...</description>
+        <pubDate>Sun, 04 Feb 2018 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/Web_SimpleCMS_CodeGateQ/</link>
+        <guid isPermaLink="true">http://localhost:4000/Web_SimpleCMS_CodeGateQ/</guid>
+        
+        <category>Web Security, CTF, CodeGate 2018, Prequals, SQLi, Source Code SQLi</category>
+        
+        
+        <category>Web, CTF, SQLi, Web Security</category>
+        
+      </item>
+    
+      <item>
+        <title>Session_id manipulation - SharifCTF 2018</title>
+        <description>&lt;p&gt;So this was my very next CTF after Acebear which was a Fun CTF. Talking about this challenge, the only reason why I’m writing a write up is that this challenge had comparatively very less solves.&lt;/p&gt; &lt;p&gt;The description talks about the username which is &lt;code class=&quot;highlighter-rouge&quot;&gt;jack&lt;/code&gt; and states that &lt;code class=&quot;highlighter-rouge&quot;&gt;password: Year and month of Jack's birthday.&lt;/code&gt;. So the first step that came into my mind was bruteforcing the hell out of there( &lt;a href=&quot;https://github.com/gokulkrishna01/gokulkrishna01.github.io/blob/master/exploit.py&quot;&gt;Exploit&lt;/a&gt; ) and had a very hard time in finding them as the DOB was kinda screwed up. Finally after around one hour, managed to get...</description>
+        <pubDate>Sun, 04 Feb 2018 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/SharifCTF_Web_Photoshare/</link>
+        <guid isPermaLink="true">http://localhost:4000/SharifCTF_Web_Photoshare/</guid>
+        
+        <category>Web Security, CTF, SharifCTF, Bruteforce, Session overwrite</category>
+        
+        
+        <category>Web, CTF, Bruteforce, Session_id manipulation</category>
+        
+      </item>
+    
+      <item>
+        <title>Remote Code Execution via Session - InsomniHack Teaser 2018</title>
+        <description>&lt;p&gt;This year’s Insomni’Hack had pretty much decent challenges even though it took some time before my team could solve. The first challenge being, &lt;code class=&quot;highlighter-rouge&quot;&gt;VulnShop&lt;/code&gt;. A pretty straightforward description with a few functionalities in the page along with the source code made it neat and clean.&lt;/p&gt; &lt;figure class=&quot;foto-legenda&quot;&gt; &lt;img src=&quot;/assets/img/writeup2/firstpage&quot; alt=&quot;&quot; /&gt; &lt;/figure&gt; &lt;p&gt;Going through the source code, two particular function caught my attention: &lt;code class=&quot;highlighter-rouge&quot;&gt;captcha&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;captcha-verify&lt;/code&gt;.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'contactus'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;p&amp;gt;You can't contact us for the moment, but it will be available later.&amp;lt;/p&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;\_SESSION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'challenge'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;...</description>
+        <pubDate>Sun, 21 Jan 2018 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/Web_VulnShop_InsomniHack/</link>
+        <guid isPermaLink="true">http://localhost:4000/Web_VulnShop_InsomniHack/</guid>
+        
+        <category>Web Security, CTF, Insomnihack, RCE, Session overwrite</category>
+        
+        
+        <category>Web, CTF, PHP-RCE</category>
+        
+      </item>
+    
+      <item>
+        <title>InCTF Web500 Secure Auth</title>
+        <description>&lt;p&gt;This year InCTF, the first international CTF (organised by &lt;a href=&quot;http://bi0s.in/&quot;&gt;team bi0s&lt;/a&gt;), ended on 17th of December 2017. Congrats to OpenToAll, Dcua and jinmo123 for finishing in the top three positions respectively.&lt;/p&gt; &lt;p&gt;We had around 27 challenges for the CTF from Web, pwn, RE, Mobile, Crypto and Forensics. Since web is my area, I had designed a challenge, &lt;code class=&quot;highlighter-rouge&quot;&gt;Secure Auth&lt;/code&gt; which was not just based on Web, but also on RE. The challenge was designed in such a way that to get the flag, you will have to bypass the authentication which is in JS.&lt;/p&gt; &lt;p&gt;About the challenge, you...</description>
+        <pubDate>Mon, 18 Dec 2017 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/Web500_Secure_Auth/</link>
+        <guid isPermaLink="true">http://localhost:4000/Web500_Secure_Auth/</guid>
+        
+        <category>Web Security, CTF, InCTF, Unicorn JS</category>
+        
+        
+        <category>Web, CTF, Unicorn JS</category>
+        
+      </item>
+    
+      <item>
+        <title>One Side-Channel to Bring Them All and in the Darkness Bind Them: Associating Isolated Browsing Sessions</title>
+        <description>&lt;p&gt;After reading through papers intensively on Web Privacy, I was currently reading a recently released paper in USENIX, &lt;a href=&quot;https://www.usenix.org/conference/woot17/workshop-program/presentation/van-goethem&quot;&gt;One Side-Channel to Bring Them All and in the Darkness Bind Them: Associating Isolated Browsing Sessions&lt;/a&gt;. In recent findings, researchers have shown that unwanted web tracking is on the rise, as advertisers are trying to capitalize on users’ online activity, using increasingly intrusive and sophisticated techniques. Among all the techniques that has been found, browser fingerprinting has received the most attention since it allows trackers to uniquely identify users despite the clearing of cookies and the use of a browser’s private...</description>
+        <pubDate>Sat, 23 Sep 2017 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/Associating_Isolated_Browsing_Sessions/</link>
+        <guid isPermaLink="true">http://localhost:4000/Associating_Isolated_Browsing_Sessions/</guid>
+        
+        <category>Web-Privacy, Side-Channel, Tom_Van_Goethem, Wouter_Joosen</category>
+        
+        
+        <category>Web, Web Privacy</category>
+        
+      </item>
+    
+      <item>
+        <title>Java Serialization-CSAW Web 300</title>
+        <description>&lt;p&gt;So after a break from last year on writing &lt;a href=&quot;https://gokulkrishna01.wordpress.com/&quot;&gt;blogs&lt;/a&gt;, I thought of writing blog for this particular challenge for the reason that the time it took to get solved and also the method involved to solve this particular challenge.&lt;/p&gt; &lt;p&gt;The challenge description was &lt;code class=&quot;highlighter-rouge&quot;&gt;Not My Cup of Coffee, I heard you liked food based problems, so here's a liquid one.&lt;/code&gt; &lt;a href=&quot;http://web.chal.csaw.io:8616&quot;&gt; Challenge Link&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Clicking on the link directs us to home where they have some beans already present in a table in which scrolling down shows &lt;code class=&quot;highlighter-rouge&quot;&gt;Flag&lt;/code&gt; which we are interested in.&lt;/p&gt; &lt;figure class=&quot;foto-legenda&quot;&gt; &lt;img...</description>
+        <pubDate>Mon, 18 Sep 2017 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/Web300_CSAW_Quals/</link>
+        <guid isPermaLink="true">http://localhost:4000/Web300_CSAW_Quals/</guid>
+        
+        <category>Java Serialization, CSAW-Qualifiers, CSAW-2017</category>
+        
+        
+        <category>Web, Java Serialization</category>
+        
+      </item>
+    
+      <item>
+        <title>Escape.alf.nu walkthrough</title>
+        <description>&lt;p&gt;There are many solutions to Erling Ellingsen’s &lt;a href=&quot;https://alf.nu/alert1&quot;&gt;escape.alf.nu&lt;/a&gt; XSS challenges and I will be giving the solutions to first few challenges in the set. I suggest &lt;b&gt;not to&lt;/b&gt; read the write-up before you attempting it. It can take several days to solve the challenges depending on the amount of knowledge you’ve on the same. It took me several days to complete up till the first three challenges and I’d be posting here on how to tackle them effectively and also the key points to note upon while solving the challenges.&lt;/p&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Level 0&lt;/code&gt;:&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span...</description>
+        <pubDate>Mon, 23 Jan 2017 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/Escape.alf.nu_Walkthrough/</link>
+        <guid isPermaLink="true">http://localhost:4000/Escape.alf.nu_Walkthrough/</guid>
+        
+        <category>JavaScript, escape.alf.nu</category>
+        
+        
+        <category>escape.alf.nu, JavaScript</category>
+        
+      </item>
+    
+      <item>
+        <title>SECT CTF 16 Admin1 - Web 100 writeup</title>
+        <description>&lt;p&gt;This CTF comes after the previous MMA CTF which got over on 5th September. One of the things that attracted me was that, it included XSS challenges.&lt;/p&gt; &lt;p&gt;Challenge URL : http://xss1.sect.ctf.rocks&lt;/p&gt; &lt;p&gt;The challenge was presented with a text box and we were asked to call &lt;code class=&quot;highlighter-rouge&quot;&gt;alert(1)&lt;/code&gt;.&lt;/p&gt; &lt;figure class=&quot;foto-legenda&quot;&gt; &lt;img src=&quot;/assets/img/ctfwriteup/SECT/homescreen.png&quot; alt=&quot;&quot; /&gt; &lt;/figure&gt; &lt;p&gt;Then, I tried viewing the source code&lt;/p&gt; &lt;figure class=&quot;foto-legenda&quot;&gt; &lt;img src=&quot;/assets/img/ctfwriteup/SECT/source-code.png&quot; alt=&quot;&quot; /&gt; &lt;/figure&gt; &lt;p&gt;And I was able to find something written down inside the script tags. Then I understood essentially my target was to by pass the var a=””;. So for that, I tried injecting...</description>
+        <pubDate>Fri, 16 Sep 2016 05:50:31 +0530</pubDate>
+        <link>http://localhost:4000/Admin1_Web100_XSS_SECT_CTF/</link>
+        <guid isPermaLink="true">http://localhost:4000/Admin1_Web100_XSS_SECT_CTF/</guid>
+        
+        <category>XSS, SECT CTF</category>
+        
+        
+        <category>SECT CTF, CTF, XSS</category>
+        
+      </item>
+    
+      <item>
+        <title>CSAW CTF 16 Web 125 writeup</title>
+        <description>&lt;p&gt;In this challenge, we were given a web page showing &lt;code class=&quot;highlighter-rouge&quot;&gt;Welcome to my website! I wrote it myself from scratch!.&lt;/code&gt; Next was to find the vulnerability in the page.&lt;/p&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Challenge URL: http://web.chal.csaw.io:8000/&lt;/code&gt;&lt;/p&gt; &lt;p&gt;Obviously the first thing was to look at the source code and found something commented out &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;br /&amp;gt;&amp;lt;!--&amp;lt;li &amp;gt;&amp;lt;a href=&quot;?page=flag&quot;&amp;gt;My secrets&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/p&gt; &lt;p&gt;My next aim was to get that using LFI, but it failed as they were filtering off and produced a message Detected hacking attempt! I was sure that there was a &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; page as he had mentioned it in the about page which...</description>
+        <pubDate>Fri, 16 Sep 2016 05:36:31 +0530</pubDate>
+        <link>http://localhost:4000/AssertFunction_CSAW16_Web125/</link>
+        <guid isPermaLink="true">http://localhost:4000/AssertFunction_CSAW16_Web125/</guid>
+        
+        <category>Assert(), CSAW</category>
+        
+        
+        <category>CSAW CTF, CTF, Assert Vulnerability</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "A quick look-back"
+comments: true
 image: ''
 date:   2018-02-12 00:06:31
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Remote Code Execution via Session - InsomniHack Teaser 2018"
+comments: true
 image: ''
 date:   2018-01-21 00:06:31
 tags:
