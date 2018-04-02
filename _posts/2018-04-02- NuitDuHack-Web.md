@@ -13,8 +13,9 @@ categories:
 
 I did not get much time to play this CTF but within the time frame, I was able to solve this particular challenge, CoinGame. This challenge had comparatively lesser solves than other web challenges but was easy.
 
-Challenge link : http://coingame.challs.malice.fr/
-Points: 200
+Challenge link : `http://coingame.challs.malice.fr/`
+
+Points: `200`
 
 So about this challenge, we get a welcome page wherein it is written `CURL service`
 <figure class="foto-legenda">
