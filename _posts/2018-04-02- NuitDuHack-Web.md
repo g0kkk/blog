@@ -11,7 +11,7 @@ categories:
 - Web, CTF, LFI, Web Security
 ---
 
-I did not get much time to play this CTF but within the time frame, I was able to solve this particular challenge, CoinGame. This challenge had comparatively lesser solves than other web challenges but was easy.
+I did not get much time to play this CTF but within the time frame, CoinGame was one of the challenges which I was able to solve. This challenge had comparatively lesser solves than other web challenges but was easy.
 
 Challenge link : `http://coingame.challs.malice.fr/`
 
