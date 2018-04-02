@@ -10,11 +10,6 @@ description: 'NuitDuHack CoinGame Web Challenge writeup'
 categories:
 - Web, CTF, LFI, Web Security
 ---
-<article id="page">
-    {% include advertisements.html %}
-  {{ content }}
-
-</article>
 
 I did not get much time to play this CTF but within the time frame, I was able to solve this particular challenge, CoinGame. This challenge had comparatively lesser solves than other web challenges but was easy.
 
