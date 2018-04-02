@@ -55,7 +55,7 @@ Since the file names were there, I quickly tried to see if the files that exist 
 
 I assumed that all the other challenge file names would be the same and we have to only find the files which are altered by the admin of the challenge. I was quickly going through the files in the github repo and found that there were a lot of files and manually fetching would be cumbersome.
 
-So with the help of my team mate, `dnvira`, we got a <a href="">script</a> which would actually wget the entire files and subdirectories.
+So with the help of my team mate, `dnvira`, we got a <a href="https://github.com/gokulkrishna01/gokulkrishna01.github.io/tree/master/scripts/NuitDu">script</a> which would actually wget the entire files and subdirectories.
 
 Comparing the hashes of the cloned repo and the one we got from the challenge server gave us a few files being differentiated. I was going through a few of them and apparently a few images in `gameAnimationImages` had flag written at the bottom end.
 
