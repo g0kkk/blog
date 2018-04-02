@@ -18,26 +18,26 @@ Points: 200
 
 So about this challenge, we get a welcome page wherein it is written `CURL service`
 <figure class="foto-legenda">
-	<img src="{{ "/assets/img/nuitduhack/HomeScreen"}}" alt="">
+	<img src="{{ "/assets/img/nuitduhack/HomeScreen.png"}}" alt="">
 </figure>
 
 
 and a textbox wherein we can give url's (hopefully).
 
 <figure class="foto-legenda">
-	<img src="{{ "/assets/img/nuitduhack/cURL_request"}}" alt="">
+	<img src="{{ "/assets/img/nuitduhack/cURL_request.png"}}" alt="">
 </figure>
 
 The source code revealed nothing. But after giving `google.com` in the textbox, we were able to notice a particular request being set and showing us a page with response status `302`. The URL was perfect enough to understand what it was, LFI.
 
 <figure class="foto-legenda">
-	<img src="{{ "/assets/img/nuitduhack/url"}}" alt="">
+	<img src="{{ "/assets/img/nuitduhack/url.png"}}" alt="">
 </figure>
 
 The very next step was to see what is inside `/etc/passwd`. `http://coingame.challs.malice.fr/curl.php?way=../../../etc/passwd` reveals nothing but, `http://coingame.challs.malice.fr/curl.php?way=file:///etc/passwd` gave us the list of every registered user that has access to that system.
 
 <figure class="foto-legenda">
-	<img src="{{ "/assets/img/nuitduhack/etc"}}" alt="">
+	<img src="{{ "/assets/img/nuitduhack/etc.png"}}" alt="">
 </figure>
 
 One particular thing that caught in my mind was <a href="https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol">tftp</a>. Since the challenge description had mentioned a game, I quickly googled and got the link to the same <a href="https://github.com/totheyellowmoon/CoinGame/">repo</a>.
@@ -45,7 +45,7 @@ One particular thing that caught in my mind was <a href="https://en.wikipedia.or
 Since the file names were there, I quickly tried to see if the files that exist in the challenge server are the same. I then gave in `http://coingame.challs.malice.fr/curl.php?way=file:///home/CoinGame/Bonus.py` which gave me the `Bonus.py` file.
 
 <figure class="foto-legenda">
-	<img src="{{ "/assets/img/nuitduhack/coingamedir"}}" alt="">
+	<img src="{{ "/assets/img/nuitduhack/coingamedir.png"}}" alt="">
 </figure>
 
 I assumed that all the other challenge file names would be the same and we have to only find the files which are altered by the admin of the challenge. I was quickly going through the files in the github repo and found that there were a lot of files and manually fetching would be cumbersome.
