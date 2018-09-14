@@ -6,7 +6,7 @@ image: ''
 date:   2018-05-01 02:06:31
 tags:
 - Web Security, CTF, ASIS 2018, ASIS Quals, SQLi, SQL Injection, Web Application Firewall
-description: 'Sunshine CTF 2018 web challenges writeup'
+description: 'ASIS Quals 2018 - Good WAF Web Challenge'
 categories:
 - Web, CTF, ASIS Quals, Web Security, SQLi
 ---
